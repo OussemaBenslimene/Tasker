@@ -428,36 +428,7 @@ function ActiveCard() {
                   onChecklistCreated={onChecklistCreated}
                 />
 
-                <SidebarItem>
-                  <WatchLaterOutlinedIcon fontSize="small" />
-                  Dates
-                </SidebarItem>
-                <SidebarItem>
-                  <AutoFixHighOutlinedIcon fontSize="small" />
-                  Custom Fields
-                </SidebarItem>
-              </Stack>
-
-              <Divider sx={{ my: 2 }} />
-
-              <Typography
-                sx={{ fontWeight: '600', color: 'primary.main', mb: 1 }}
-              >
-                Power-Ups
-              </Typography>
-              <Stack direction="column" spacing={1}>
-                <SidebarItem>
-                  <AspectRatioOutlinedIcon fontSize="small" />
-                  Card Size
-                </SidebarItem>
-                <SidebarItem>
-                  <AddToDriveOutlinedIcon fontSize="small" />
-                  Google Drive
-                </SidebarItem>
-                <SidebarItem>
-                  <AddOutlinedIcon fontSize="small" />
-                  Add Power-Ups
-                </SidebarItem>
+                
               </Stack>
 
               <Divider sx={{ my: 2 }} />
@@ -468,18 +439,7 @@ function ActiveCard() {
                 Actions
               </Typography>
               <Stack direction="column" spacing={1}>
-                <SidebarItem>
-                  <ArrowForwardOutlinedIcon fontSize="small" />
-                  Move
-                </SidebarItem>
-                <SidebarItem>
-                  <ContentCopyOutlinedIcon fontSize="small" />
-                  Copy
-                </SidebarItem>
-                <SidebarItem>
-                  <AutoAwesomeOutlinedIcon fontSize="small" />
-                  Make Template
-                </SidebarItem>
+                
                 <SidebarItem
                   onClick={() => handleDeleteCard()}
                   sx={{
@@ -497,10 +457,7 @@ function ActiveCard() {
                   />
                   Delete
                 </SidebarItem>
-                <SidebarItem>
-                  <ShareOutlinedIcon fontSize="small" />
-                  Share
-                </SidebarItem>
+                
               </Stack>
             </Grid>
           </Grid>
