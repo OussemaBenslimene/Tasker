@@ -10,7 +10,7 @@ import { env } from '~/config/environment'
 import cookieParser from 'cookie-parser'
 
 const corsOptions = {
-  origin: '*', // Accept requests from all origins
+  origin: 'https://tasker-site.onrender.com', // Accept requests from all origins
   methods: ['GET', 'POST'], // Allowed methods
   credentials: false // No credentials required for open CORS
 };
