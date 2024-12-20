@@ -35,6 +35,8 @@ const START_SERVER = () => {
   app.use(express.json())
 
   app.use(cors(corsOptions))
+ 
+ app.options('*', cors(corsOptions))
 
  
   app.use('/v1', APIs_V1)
