@@ -6,14 +6,11 @@ import exitHook from 'async-exit-hook'
 import { errorHandlingMiddleware } from '~/middlewares/errorHandlingMiddleware'
 import { APIs_V1 } from './routes/v1'
 import { CONNECT_DB, CLOSE_DB } from '~/config/mongodb'
+import { corsOptions } from './config/cors'
 import { env } from '~/config/environment'
 import cookieParser from 'cookie-parser'
 
-const corsOptions = {
-  origin: 'https://tasker-site.onrender.com', // Accept requests from all origins
-  methods: ['GET', 'POST'], // Allowed methods
-  credentials: false // No credentials required for open CORS
-};
+
 
 
 import http from 'http'
