@@ -41,7 +41,7 @@ export const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {},
-  // extraReducers: Là nơi chứa các hành động gọi api (bất đồng bộ) và cập nhật dữ liệu vào Redux
+  
   extraReducers: (builder) => {
     builder.addCase(loginUserAPI.fulfilled, (state, action) => {
       const user = action.payload
@@ -49,10 +49,7 @@ export const userSlice = createSlice({
       state.currentUser = user
     })
     builder.addCase(logoutUserAPI.fulfilled, (state) => {
-      /**
-       * API logout sau khi gọi thành công thì sẽ clear thông tin currentUser về null ở đây
-       * Kết hợp ProtectedRoute đã làm ở App.js => code sẽ điều hướng chuẩn về trang Login
-       */
+     
       state.currentUser = null
     })
     builder.addCase(updateUserAPI.fulfilled, (state, action) => {
@@ -62,7 +59,7 @@ export const userSlice = createSlice({
   }
 })
 
-// export const {} = userSlice.actions
+
 
 export const selectCurrentUser = (state) => {
   return state.user.currentUser
