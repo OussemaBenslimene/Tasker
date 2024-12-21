@@ -23,7 +23,7 @@ export const logoutUserAPI = createAsyncThunk(
 export const loginUserAPI = createAsyncThunk(
   'user/loginUserAPI',
   async (data) => {
-    const response = await authorizedAxiosInstance.post(`/api/${API_ROOT}/v1/users/login`, data)
+    const response = await authorizedAxiosInstance.post(`${API_ROOT}/v1/users/login`, data)
 
     return response.data
   }
