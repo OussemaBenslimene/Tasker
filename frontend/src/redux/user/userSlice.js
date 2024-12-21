@@ -10,7 +10,7 @@ const initialState = {
 export const logoutUserAPI = createAsyncThunk(
   'user/logoutUserAPI',
   async (showSuccessMessage = true) => {
-    const response = await authorizedAxiosInstance.delete(`/api/${API_ROOT}/v1/users/logout`)
+    const response = await authorizedAxiosInstance.delete(`${API_ROOT}/v1/users/logout`)
     if (showSuccessMessage) {
       toast.success('Logged out successfully!')
     }
@@ -23,7 +23,7 @@ export const logoutUserAPI = createAsyncThunk(
 export const loginUserAPI = createAsyncThunk(
   'user/loginUserAPI',
   async (data) => {
-    const response = await authorizedAxiosInstance.post(`/api/${API_ROOT}/v1/users/login`, data)
+    const response = await authorizedAxiosInstance.post(`${API_ROOT}/v1/users/login`, data)
 
     return response.data
   }
@@ -32,7 +32,7 @@ export const loginUserAPI = createAsyncThunk(
 export const updateUserAPI = createAsyncThunk(
   'user/updateUserAPI',
   async (data) => {
-    const response = await authorizedAxiosInstance.put(`/api/${API_ROOT}/v1/users/update`, data)
+    const response = await authorizedAxiosInstance.put(`${API_ROOT}/v1/users/update`, data)
     return response.data
   }
 )
