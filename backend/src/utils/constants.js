@@ -2,7 +2,7 @@ import { env } from '~/config/environment'
 
 export const WHITELIST_DOMAINS = [
   'http://localhost:5173',
-  'https://tasker-ll0c.onrender.com',
+  'https://tasker-site.onrender.com',
   'http://localhost',
   'https://hant20210298.id.vn'
 ]
