@@ -4,7 +4,7 @@ export const WHITELIST_DOMAINS = [
   'http://localhost:5173',
   'https://tasker-site.onrender.com',
   'http://localhost',
-  'https://hant20210298.id.vn'
+  'https://tasker-eight-rho.vercel.app'
 ]
 
 export const BOARD_TYPES = {
