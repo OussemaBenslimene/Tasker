@@ -4,7 +4,7 @@ import { API_ROOT } from '~/utils/constants'
 
 
 export const fetchBoardsAPI = async (searchPath) => {
-  const response = await authorizedAxiosInstance.get(`${API_ROOT}/v1/boards${searchPath}`)
+  const response = await authorizedAxiosInstance.get(`/api/${API_ROOT}/v1/boards${searchPath}`)
   return response.data
 }
 
