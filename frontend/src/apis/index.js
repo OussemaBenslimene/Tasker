@@ -4,7 +4,7 @@ import { API_ROOT } from '~/utils/constants'
 
 
 export const fetchBoardsAPI = async (searchPath) => {
-  const response = await authorizedAxiosInstance.get(`/api/${API_ROOT}/v1/boards${searchPath}`)
+  const response = await authorizedAxiosInstance.get(`${API_ROOT}/v1/boards${searchPath}`)
   return response.data
 }
 
@@ -68,48 +68,48 @@ export const deleteCardDetailsAPI = async (cardId) => {
 }
 
 export const createChecklistAPI = async (cardId, newChecklistData) => {
-  const response = await authorizedAxiosInstance.post(`/api/${API_ROOT}/v1/cards/${cardId}/create-checklist`, newChecklistData)
+  const response = await authorizedAxiosInstance.post(`${API_ROOT}/v1/cards/${cardId}/create-checklist`, newChecklistData)
   return response.data
 }
 
 export const updateChecklistAPI = async (cardId, checklistId, updatedChecklistData) => {
-  const response = await authorizedAxiosInstance.put(`/api/${API_ROOT}/v1/cards/${cardId}/${checklistId}/update-checklist`, updatedChecklistData)
+  const response = await authorizedAxiosInstance.put(`${API_ROOT}/v1/cards/${cardId}/${checklistId}/update-checklist`, updatedChecklistData)
   return response.data
 }
 
 export const addChecklistItemAPI = async (cardId, checklistId, newChecklistItemData) => {
-  const response = await authorizedAxiosInstance.post(`/api/${API_ROOT}/v1/cards/${cardId}/${checklistId}/add-checklist-item`, newChecklistItemData)
+  const response = await authorizedAxiosInstance.post(`${API_ROOT}/v1/cards/${cardId}/${checklistId}/add-checklist-item`, newChecklistItemData)
   return response.data
 }
 
 export const deleteChecklistAPI = async (cardId, checklistId) => {
-  const response = await authorizedAxiosInstance.delete(`/api/${API_ROOT}/v1/cards/${cardId}/${checklistId}/delete-checklist`)
+  const response = await authorizedAxiosInstance.delete(`${API_ROOT}/v1/cards/${cardId}/${checklistId}/delete-checklist`)
   return response.data
 }
 
 export const setChecklistItemCompletedAPI = async (cardId, checklistId, checklistItemId, completed) => {
-  const response = await authorizedAxiosInstance.put(`/api/${API_ROOT}/v1/cards/${cardId}/${checklistId}/${checklistItemId}/completed`, { completed })
+  const response = await authorizedAxiosInstance.put(`${API_ROOT}/v1/cards/${cardId}/${checklistId}/${checklistItemId}/completed`, { completed })
   return response.data
 }
 
 export const setChecklistItemTextAPI = async (cardId, checklistId, checklistItemId, text) => {
-  const response = await authorizedAxiosInstance.put(`/api/${API_ROOT}/v1/cards/${cardId}/${checklistId}/${checklistItemId}/text`, { text })
+  const response = await authorizedAxiosInstance.put(`${API_ROOT}/v1/cards/${cardId}/${checklistId}/${checklistItemId}/text`, { text })
   return response.data
 }
 
 export const deleteChecklistItemAPI = async (cardId, checklistId, checklistItemId) => {
-  const response = await authorizedAxiosInstance.delete(`/api/${API_ROOT}/v1/cards/${cardId}/${checklistId}/${checklistItemId}/delete-checklist-item`)
+  const response = await authorizedAxiosInstance.delete(`${API_ROOT}/v1/cards/${cardId}/${checklistId}/${checklistItemId}/delete-checklist-item`)
   return response.data
 }
 
 export const createAttachmentAPI = async (cardId, attachmentData) => {
-  const response = await authorizedAxiosInstance.post(`/api/${API_ROOT}/v1/cards/${cardId}/attachment`, attachmentData);
+  const response = await authorizedAxiosInstance.post(`${API_ROOT}/v1/cards/${cardId}/attachment`, attachmentData);
   return response.data;
 };
 
 export const updateAttachmentNameAPI = async (cardId, attachmentId, newName) => {
   const response = await authorizedAxiosInstance.put(
-    `/api/${API_ROOT}/v1/cards/${cardId}/${attachmentId}/update-name`,
+    `${API_ROOT}/v1/cards/${cardId}/${attachmentId}/update-name`,
     { name: newName }
   );
   return response.data;
@@ -117,31 +117,31 @@ export const updateAttachmentNameAPI = async (cardId, attachmentId, newName) => 
 
 export const updateAttachmentLinkAPI = async (cardId, attachmentId, newLink) => {
   const response = await authorizedAxiosInstance.put(
-    `/api/${API_ROOT}/v1/cards/${cardId}/${attachmentId}/update-link`,
+    `${API_ROOT}/v1/cards/${cardId}/${attachmentId}/update-link`,
     { link: newLink }
   );
   return response.data;
 };
 
 export const deleteAttachmentAPI = async (cardId, attachmentId) => {
-  const response = await authorizedAxiosInstance.delete(`/api/${API_ROOT}/v1/cards/${cardId}/${attachmentId}/delete-attachment`);
+  const response = await authorizedAxiosInstance.delete(`${API_ROOT}/v1/cards/${cardId}/${attachmentId}/delete-attachment`);
   return response.data;
 };
 
 
 export const registerUserAPI = async (data) => {
-  const response = await authorizedAxiosInstance.post(`/api/${API_ROOT}/v1/users/register`, data)
+  const response = await authorizedAxiosInstance.post(`${API_ROOT}/v1/users/register`, data)
   toast.success('Account created successfully! Please check and verify your account before logging in!', { theme: 'colored' })
   return response.data
 }
 
 export const verifyUserAPI = async (data) => {
-  const response = await authorizedAxiosInstance.put(`/api/${API_ROOT}/v1/users/verify`, data)
+  const response = await authorizedAxiosInstance.put(`${API_ROOT}/v1/users/verify`, data)
   toast.success('Account verified successfully! Now you can login to enjoy our services! Have a good day!', { theme: 'colored' })
   return response.data
 }
 
 export const refreshTokenAPI = async () => {
-  const response = await authorizedAxiosInstance.get(`/api/${API_ROOT}/v1/users/refresh_token`)
+  const response = await authorizedAxiosInstance.get(`${API_ROOT}/v1/users/refresh_token`)
   return response.data
 }
