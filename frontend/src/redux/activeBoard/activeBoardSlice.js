@@ -12,7 +12,7 @@ const initialState = {
 export const fetchBoardDetailsAPI = createAsyncThunk(
   'activeBoard/fetchBoardDetailsAPI',
   async (boardId) => {
-    const response = await authorizedAxiosInstance.get(`${API_ROOT}/v1/boards/${boardId}`)
+    const response = await authorizedAxiosInstance.get(`/api/${API_ROOT}/v1/boards/${boardId}`)
 
     return response.data
   }
